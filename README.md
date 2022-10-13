@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h4 align="center">Primeros pasos en Node JS con api de  APOD</a>.</h4>
+<h4 align="center">Primeros pasos en Node JS con api de NASA</a>.</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
