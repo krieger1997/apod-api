@@ -8,7 +8,6 @@ html(lang="en")
         link(rel="preconnect", href="https://fonts.googleapis.com")
         link(rel="preconnect", href="https://fonts.gstatic.com",crossorigin="")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&display=swap")
-        //- script(src="./script.js") 
         title API NASA
     body(style="background-color:black;") 
         .container-fluid
@@ -16,7 +15,7 @@ html(lang="en")
                 span(style="font-family: 'Cinzel', serif;").fs-1.text-secondary Astronomy Picture of the Day
             .row(style="height:80%;")
                 .col-7.d-flex.justify-content-center
-                    img(src=ruta, alt="Imagen del dia nasa", style="max-height:85vh;box-shadow: inset 0 0 100px black;",data-bs-toggle="modal", data-bs-target="#modalImg")
+                    img(src=ruta, title="Presionar para ver version HD", alt="Imagen del dia nasa", style="cursor: pointer;max-height:85vh;box-shadow: inset 0 0 100px black;",data-bs-toggle="modal", data-bs-target="#modalImg")
                 .col.d-flex.align-items-center
                     div
                         h3(style="font-family: 'Cinzel', serif;").ms-5.text-secondary=titulo_imagen
@@ -31,8 +30,8 @@ html(lang="en")
                     svg.bi.bi-github(xmlns='http://www.w3.org/2000/svg', width='32', height='32', fill='grey', viewbox='0 0 16 16')
                         path(d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z')
         .modal.fade#modalImg(tabindex="-1", aria-hidden="true")
-            .modal-dialog.modal-dialog-centered
-                .modal-content 
-                    .modal-body 
+            .modal-dialog.modal-dialog-centered.modal-xl
+                .modal-content.bg-dark 
+                    .modal-body(style="display: flex;justify-content: center;") 
                         img(src=ruta_hd, alt="Imagen del dia nasa")
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3", crossorigin="anonymous") 
