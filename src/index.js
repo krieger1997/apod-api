@@ -13,7 +13,7 @@ app.get('/apod',(req, res)=>{
   request('https://api.nasa.gov/planetary/apod'+'?api_key='+cred.apikey, (err, body)=>{
     var json = JSON.parse(body['body'])
     console.log(json) 
-    res.render('index',{ruta:json['url'], titulo_imagen:json['title'],descripcion:json['explanation'],autor:json['copyright']})
+    res.render('index',{ruta:json['url'],ruta_hd:json['hdurl'], titulo_imagen:json['title'],descripcion:json['explanation'],autor:json['copyright']})
     // res.render('index',{ruta:json['hdurl'], titulo_imagen:json['title'],descripcion:json['explanation'],autor:json['copyright']})
   } )
 })
