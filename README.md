@@ -33,6 +33,8 @@ $ cd apod-api
 # Run the app
 $ node .
 ```
+Se recomienda cambiar el valor de la contante ```apikey``` ubicado en ```./cred.js```, ya que tiene una key de pruebas. 
+Para obtener una propia, debe registrarse [aqui](https://api.nasa.gov/), en **Generate API Key**.
 ## Creditos
 
 Esta aplicación usa las siguientes librerias de codigo abierto y api:
