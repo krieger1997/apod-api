@@ -5,17 +5,20 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css",integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi",crossorigin="anonymous")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com",crossorigin="")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&display=swap")
         title API NASA
     body(style="background-color:black;") 
         .container-fluid
             .d-flex.justify-content-center
-                span.fs-1.text-secondary.fw-bold Astronomy Picture of the Day
+                span(style="font-family: 'Cinzel', serif;").fs-1.text-secondary Astronomy Picture of the Day
             .row(style="height:80%;")
-                .col-7 
+                .col-7.d-flex.justify-content-center
                     img(src=ruta, alt="Imagen del dia nasa", style="max-height:85vh;box-shadow: inset 0 0 100px black;")
                 .col.d-flex.align-items-center
                     div
-                        h1.ms-5.text-secondary=titulo_imagen
+                        h3(style="font-family: 'Cinzel', serif;").ms-5.text-secondary=titulo_imagen
                         p.ms-5.text-secondary=autor
                         p.ms-5.me-4.text-secondary=descripcion
             .d-flex.justify-content-center.mt-4.mb-4
