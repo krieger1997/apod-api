@@ -6,13 +6,13 @@ var cred = require('../cred.js')
 const port = 1337;
 apikey = cred.apikey;
 
-console.log(apikey);
+// console.log(apikey);
 
 app.set('view engine','pug');
 app.get('/apod',(req, res)=>{
   request('https://api.nasa.gov/planetary/apod'+'?api_key='+cred.apikey, (err, body)=>{
     var json = JSON.parse(body['body'])
-    console.log(json) 
+    // console.log(json) 
     res.render('index',{ruta:json['url'],ruta_hd:json['hdurl'], titulo_imagen:json['title'],descripcion:json['explanation'],autor:json['copyright']})
     // res.render('index',{ruta:json['hdurl'], titulo_imagen:json['title'],descripcion:json['explanation'],autor:json['copyright']})
   } )
